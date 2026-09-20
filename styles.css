@@ -1,0 +1,44 @@
+:root {
+  --ink: #1d2947;
+  --paper: #f6f1e7;
+  --coral: #e6725b;
+  --gold: #f3bd42;
+  --line: rgba(29, 41, 71, .24);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; color: var(--ink); background: var(--paper); font-family: "Work Sans", sans-serif; font-size: 16px; line-height: 1.6; }
+.site-header { align-items: center; border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; padding: 23px clamp(24px, 6vw, 94px); }
+.brand, .header-link, .text-link { color: inherit; text-decoration: none; }
+.brand { font-family: "DM Mono", monospace; font-size: .85rem; letter-spacing: .04em; }
+.brand span { color: var(--coral); }
+.header-link, .section-number { font-family: "DM Mono", monospace; font-size: .68rem; letter-spacing: .08em; text-transform: uppercase; }
+.header-link span { color: var(--coral); font-size: 1.1rem; margin-left: 7px; }
+.intro { min-height: 600px; overflow: hidden; padding: clamp(90px, 13vw, 180px) clamp(24px, 13vw, 215px) 120px; position: relative; }
+.eyebrow { font-family: "DM Mono", monospace; font-size: .75rem; letter-spacing: .08em; margin: 0 0 20px; text-transform: uppercase; }
+.eyebrow span { color: var(--coral); }
+h1, h2 { font-family: "Playfair Display", Georgia, serif; font-weight: 500; letter-spacing: -.04em; line-height: .98; margin: 0; }
+h1 { font-size: clamp(3.8rem, 8.8vw, 8.2rem); position: relative; z-index: 1; }
+.intro-copy { font-size: clamp(1rem, 1.3vw, 1.18rem); margin: 30px 0; max-width: 440px; position: relative; z-index: 1; }
+.text-link { border-bottom: 1px solid var(--ink); font-family: "DM Mono", monospace; font-size: .72rem; letter-spacing: .06em; padding-bottom: 5px; position: relative; text-transform: uppercase; z-index: 1; }
+.text-link span { color: var(--coral); font-size: 1rem; margin-left: 5px; }
+.sun { background: var(--gold); border-radius: 50%; height: clamp(240px, 34vw, 520px); position: absolute; right: clamp(-75px, 2vw, 50px); top: clamp(65px, 7vw, 110px); width: clamp(240px, 34vw, 520px); }
+.about { background: var(--ink); color: #f8f4ec; padding: clamp(70px, 10vw, 145px) clamp(24px, 13vw, 215px); }
+.section-number { margin: 0 0 55px; opacity: .72; }
+.about-grid { display: grid; gap: 56px; grid-template-columns: minmax(240px, 1fr) minmax(280px, .9fr); }
+h2 { font-size: clamp(3rem, 6vw, 5.8rem); }
+.about-grid p { margin: 0 0 25px; max-width: 440px; }
+.about-grid .edit-note { border-left: 2px solid var(--coral); color: #d8d1c3; font-family: "DM Mono", monospace; font-size: .72rem; line-height: 1.6; margin-top: 38px; padding-left: 14px; }
+.painting { padding: clamp(70px, 10vw, 145px) clamp(24px, 13vw, 215px); }
+.painting-heading { align-items: end; display: flex; justify-content: space-between; margin-bottom: 64px; }
+.painting-heading .section-number { margin: 0; }
+.painting-heading h2 { max-width: 550px; text-align: right; }
+figure { margin: 0; }
+figure img { display: block; height: min(63vw, 720px); object-fit: cover; object-position: center; width: 100%; }
+figcaption { border-bottom: 1px solid var(--line); display: flex; font-size: .8rem; gap: 25px; justify-content: space-between; padding: 16px 0; }
+figcaption span:last-child { color: #6b7180; text-align: right; }
+.painting-copy { font-family: "Playfair Display", Georgia, serif; font-size: clamp(1.65rem, 3vw, 2.9rem); letter-spacing: -.025em; line-height: 1.2; margin: 54px 0 0 auto; max-width: 680px; }
+footer { border-top: 1px solid var(--line); display: flex; font-family: "DM Mono", monospace; font-size: .68rem; justify-content: space-between; letter-spacing: .05em; padding: 25px clamp(24px, 6vw, 94px); text-transform: uppercase; }
+footer p { margin: 0; } footer span { color: var(--coral); }
+@media (max-width: 680px) { .site-header { padding: 19px 24px; } .header-link { font-size: .6rem; } .intro { min-height: 585px; padding-top: 110px; } .sun { opacity: .9; right: -95px; top: 225px; } .about-grid { gap: 38px; grid-template-columns: 1fr; } .painting-heading { align-items: start; display: block; } .painting-heading .section-number { margin-bottom: 35px; } .painting-heading h2 { text-align: left; } figcaption, footer { display: block; } figcaption span { display: block; } figcaption span:last-child { margin-top: 7px; text-align: left; } footer p + p { margin-top: 10px; } }
